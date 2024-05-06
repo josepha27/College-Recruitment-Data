@@ -24,7 +24,7 @@ struct Record {
 
 pub fn create_graph() -> Graph<u32, u32> {
     let mut graph = Graph::<u32, u32>::new();
-    let mut rdr = Reader::from_path("path_to_your_csv_file.csv").unwrap();
+    let mut rdr = Reader::from_path("Placement_Data_Full_Class.csv").unwrap();
 
     for result in rdr.deserialize() {
         let record: Record = result.unwrap();
@@ -34,4 +34,3 @@ pub fn create_graph() -> Graph<u32, u32> {
 
     graph
 }
-// We will now perform Closeness Centrality to identify the students who are, on average, closest to all other students in terms of etest_p and status.

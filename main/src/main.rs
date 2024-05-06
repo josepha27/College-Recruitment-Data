@@ -3,6 +3,10 @@ mod centrality;
 mod average_distance;
 mod clustering;
 mod distance;
+extern {
+    fn sqrt<T>(f: T) -> T;
+}
+
 fn main() {
     let graph = graph_creation::create_graph();
     centrality::compute_centrality(&graph);
